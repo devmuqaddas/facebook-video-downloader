@@ -2101,15 +2101,6 @@ async def internal_error_handler(request: Request, exc):
         content={'error': 'Internal server error'}
     )
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     import uvicorn
-    print("🚀 Facebook Video Downloader Server Starting...")
-    print("📁 Creating necessary directories...")
-    print("✅ Server ready at http://localhost:5001")
-    print("\n📋 Instructions:")
-    print("1. Open your browser and go to http://localhost:5001")
-    print("2. Paste a Facebook video URL")
-    print("3. Select your preferred quality and download!")
-    print("\n⚠️  Make sure you have yt-dlp installed: pip install yt-dlp")
-    
-    uvicorn.run("app:app", host="0.0.0.0", port=5001, reload=True)
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
