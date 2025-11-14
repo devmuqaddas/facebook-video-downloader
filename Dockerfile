@@ -16,7 +16,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Ensure latest yt-dlp
 RUN pip install --no-cache-dir --upgrade yt-dlp
 
-EXPOSE 8080
-
-# Start FastAPI using environment port (Railway compatibility)
-CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port ${PORT:-8000} --reload"]
+EXPOSE 5000
+CMD ["python", "app.py"]
